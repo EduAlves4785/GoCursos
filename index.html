@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/home.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Go-Cursos</title>
+</head>
+<body>
+    <section class="nav">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+            </svg>
+            <p>Cadastre-se</p>
+        </div>
+        <div class="part-2">
+            <div class="descricao">
+                <h1>Go-Cursos</h1>
+                <p>Conquiste e publique suas habilidades com nossos cursos online.</p>
+                <button class="login-btn">LOGIN</button>
+            </div>
+            <div>
+                <img src="./assets/img/logo.png" alt="Logo go-cursos">
+            </div>
+        </div>
+        <div class="rodape-section">
+            <button>SAIBA MAIS</button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+        </div>
+    </section>
+    <section class="sobre">
+        <h1>Oque é a Go-Cursos ?</h1>
+        <div class="sobre-content">
+            <img src="./assets/img/carinha.png" alt="Rapaz pensativo" width="700px" height="400px">
+            <div class="content-texto">
+                <p>Nossa plataforma de cursos online visa combater a desigualdade educacional no Brasil, focando no aumento da escolaridade média da população e aumentar o índice de empregabilidade.</p><br>
+                <p>Baseado em estudos de público-alvo, desenvolvimento de modelos de plataforma educacional e definições de recursos e funcionalidades, buscamos enfrentar um dos maiores desafios sociais de nosso país.</p><br>
+                <p>Disponibilizamos <b style="color: rgb(2,94,188);">cursos gratuitos</b> e tambem com recursos premium para melhorar sua aprendizagem!</p><br>
+                <p>Possuimos cursos de diversas areas, entregando maior variedade de conhecimento com profissionais certificados e ao final do curso, você também receberá seu certificado!</p><br>
+            </div>
+        </div>
+    </section>
+    <section class="cursos">
+        <h1>Cursos disponíveis</h1>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <div class="card" style="width: 18rem;max-height: 100%;">
+                        <img src="./assets/img/curso4.png" class="card-img-top" alt="Imagem do curso de Data Lake" height="250px">
+                        <h3>Data Lake</h3>
+                        <p>O curso "Azure Data Lake" ensina profissionais a usar o Azure Data Lake Storage da Microsoft Azure para armazenar, gerenciar e processar grandes volumes de dados na nuvem. É direcionado a especialistas de TI e dados e abrange tópicos como configuração, segurança, processamento e integração com serviços Azure. Ideal para quem busca habilidades em gerenciamento de dados em nuvem.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 18rem;height: 27rem;">
+                        <img src="./assets/img/curso1.png" class="card-img-top" alt="Imagem do curso de pacote office" height="250px">
+                        <h3>Pacote office iniciante - avançado</h3>
+                        <p>Ensino prático das ferramentas Microsoft (Word, Excel, PowerPoint e Outlook) para aprimorar habilidades de produção, comunicação e trabalho profissional.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" style="width: 18rem;height: 27rem;">
+                        <img src="./assets/img/curso2.jpg" class="card-img-top" alt="Imagem do curso de marketing digital" height="250px">
+                        <h3>Marketing digital</h3>
+                        <p>Aprenda estratégias de marketing online, incluindo SEO, publicidade, mídias sociais e análise. Alcance públicos-alvo, crie conteúdo eficaz e meça resultados.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                      </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="card" style="width: 18rem;height: 27rem;">
+                        <img src="./assets/img/curso3.png" class="card-img-top" alt="Imagem do curso de marketing culinária" height="250px">
+                        <h3>Culinária</h3>
+                        <p>Domine a arte da culinária. Este curso ensina técnicas, segredos de chefs e pratos variados. Ideal para todos os níveis, proporcionando aprimoramento culinário e a capacidade de surpreender com suas criações.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                      </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+</body>
+</html>
