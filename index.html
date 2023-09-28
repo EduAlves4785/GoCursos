@@ -9,18 +9,20 @@
 </head>
 <body>
     <section class="nav">
-        <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
-                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
-            </svg>
-            <p>Cadastre-se</p>
-        </div>
+        <a href="./cadastro.html">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                    <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                </svg>
+                <p>Cadastre-se</p>
+            </div>
+        </a>
         <div class="part-2">
             <div class="descricao">
                 <h1>Go-Cursos</h1>
                 <p>Conquiste e publique suas habilidades com nossos cursos online.</p>
-                <button class="login-btn">LOGIN</button>
+                <a href="./login.html"><button class="login-btn">LOGIN</button></a>
             </div>
             <div>
                 <img src="./assets/img/logo.png" alt="Logo go-cursos">
@@ -47,59 +49,111 @@
     </section>
     <section class="cursos">
         <h1>Cursos disponíveis</h1>
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item">
-                    <div class="card" style="width: 18rem;max-height: 100%;">
-                        <img src="./assets/img/curso4.png" class="card-img-top" alt="Imagem do curso de Data Lake" height="250px">
-                        <h3>Data Lake</h3>
-                        <p>O curso "Azure Data Lake" ensina profissionais a usar o Azure Data Lake Storage da Microsoft Azure para armazenar, gerenciar e processar grandes volumes de dados na nuvem. É direcionado a especialistas de TI e dados e abrange tópicos como configuração, segurança, processamento e integração com serviços Azure. Ideal para quem busca habilidades em gerenciamento de dados em nuvem.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
+        <div class="wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso1.png" alt="Imagem curso">
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card" style="width: 18rem;height: 27rem;">
-                        <img src="./assets/img/curso1.png" class="card-img-top" alt="Imagem do curso de pacote office" height="250px">
-                        <h3>Pacote office iniciante - avançado</h3>
-                        <p>Ensino prático das ferramentas Microsoft (Word, Excel, PowerPoint e Outlook) para aprimorar habilidades de produção, comunicação e trabalho profissional.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
-                      </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card" style="width: 18rem;height: 27rem;">
-                        <img src="./assets/img/curso2.jpg" class="card-img-top" alt="Imagem do curso de marketing digital" height="250px">
-                        <h3>Marketing digital</h3>
-                        <p>Aprenda estratégias de marketing online, incluindo SEO, publicidade, mídias sociais e análise. Alcance públicos-alvo, crie conteúdo eficaz e meça resultados.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
-                      </div>
-                </div>
-                <div class="carousel-item active">
-                    <div class="card" style="width: 18rem;height: 27rem;">
-                        <img src="./assets/img/curso3.png" class="card-img-top" alt="Imagem do curso de marketing culinária" height="250px">
-                        <h3>Culinária</h3>
-                        <p>Domine a arte da culinária. Este curso ensina técnicas, segredos de chefs e pratos variados. Ideal para todos os níveis, proporcionando aprimoramento culinário e a capacidade de surpreender com suas criações.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
-                      </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+                    <h2>Pacote office</h2>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso2.jpg" alt="Imagem curso">
+                    </div>
+                    <h2>Marketing digital</h2>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso3.png" alt="Imagem curso">
+                    </div>
+                    <h2>Culinária</h2>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso4.png" alt="Imagem curso">
+                    </div>
+                    <h2>Data Lake</h2>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso5.png" alt="Imagem curso">
+                    </div>
+                    <h2>Python</h2>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="./assets/img/curso6.jpg" alt="Imagem curso">
+                    </div>
+                    <h2>Node JS</h2>
+                </li>
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+        </div>
     </section>
+    <section class="feedbacks">
+        <h1>Clientes satisfeitos</h1>
+        <div class="itens">
+            <div class="card-avaliacao">
+                <img src="./assets/img/estrelas.png" alt="Estrelas de avaliação" width="140px">
+                <img src="./assets/img/joana.png" alt="Imagem aluno" width="120px">
+                <h4>Joana Fontes</h4>
+                <span>Estou impressionado com a qualidade dos cursos neste site. As aulas são bem estruturadas, os instrutores são experientes e o conteúdo é atualizado. Aprendi muito e sinto que estou investindo meu tempo de forma valiosa.</span>
+            </div>
+            <div class="card-avaliacao">
+                <img src="./assets/img/estrelas.png" alt="Estrelas de avaliação" width="140px">
+                <img src="./assets/img/ricardo.png" alt="Imagem aluno" width="120px">
+                <h4>Ricardo Silva</h4>
+                <span>Este site de cursos online é incrível! A variedade de tópicos é surpreendente, e a plataforma é fácil de usar. Além disso, o suporte ao aluno é excelente, sempre prontos para ajudar. Recomendo a todos que desejam expandir seus conhecimentos.</span>
+            </div>
+            <div class="card-avaliacao">
+                <img src="./assets/img/estrelas.png" alt="Estrelas de avaliação" width="140px">
+                <img src="./assets/img/antonio.png" alt="Imagem aluno" width="120px">
+                <h4>Antônio Santos</h4>
+                <span>Estou muito satisfeito com a minha experiência neste site de cursos. Os cursos são acessíveis e flexíveis, o que me permitiu aprender no meu próprio ritmo. A qualidade do conteúdo é excepcional, e agora me sinto mais confiante em minha carreira graças aos novos conhecimentos adquiridos aqui.</span>
+            </div>
+        </div>
+    </section>
+    <section class="recursos-premium">
+        <h1>Recurso Premium</h1>
+        <p>Confira nosso recurso para melhorar seu aprendizado!</p>
+        <div class="box-itens">
+            <img src="./assets/img/selo.png" alt="Premium quality" width="450px" height="400px">
+            <div class="info-pacote">
+                <h1>PACOTE ANUAL</h1>
+                <ul>
+                    <li>AULAS ONLINES AO VIVO COM PROFESSORES</li>
+                    <li>UBLICAÇÕES COM MAIOR ALCANCE E DESTAQUE NA PLATAFORMA</li>
+                    <li>SUPORTE PRIORITÁRIO</li>
+                </ul>
+            </div>
+        </div>
+        <div class="comprar">
+            <h1>R$ 99,99</h1> 
+            <button>COMPRAR</button> 
+        </div>
+    </section>
+    <section class="entre-contato">
+        <div class="itens">
+           <h1>Entre em contato</h1> 
+           <div class="box-ticket">
+                <p>Abra um ticket para nosso time de suporte, caso precise de ajuda.</p>
+                <p>É bem simples, basta clicar no botão abaixo!</p>
+                <button>ABRIR TICEKT</button>
+            </div>
+            <strong>EMAIL DE SUPORTE :</strong>
+            <p>suporte@gocursos.com</p>
+        </div>
+        <div>
+            <img class="logo-contato" src="./assets/img/contato.png" alt="Contato imagem" >
+        </div>
+    </section>
+    <script src="./assets/JS/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
 </body>
 </html>

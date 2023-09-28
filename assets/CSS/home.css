@@ -1,138 +1,431 @@
-body{
-    background-image:url('../img/fundo-azul.png');
-    background-size: cover;
-    background-repeat:no-repeat ;
+body {
+  background-image: url("../img/fundo-azul.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*CSS da nav*/
 
-.icon{
-    color: white;
-    margin: 2rem 4rem;
+.icon {
+  color: white;
+  margin: 2rem 4rem;
 }
 
-.nav{
-    display: flex;
-    flex-direction: column;
+.nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.part-2{
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 1rem 8rem;
+.nav a{
+    text-decoration: none; 
+    color: inherit;
+    
 }
 
-.part-2>img{
-    right: 0;
-    margin-left: 10rem;
+.part-2 {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem 8rem;
 }
 
-.descricao{
-    width: 25rem;
-    color: white;
+.part-2 > img {
+  right: 0;
+  margin-left: 10rem;
 }
 
-.descricao>h1{
-    font-size: 60px;
+.descricao {
+  width: 25rem;
+  color: white;
 }
 
-.descricao>p{
-    font-size: 20px;
+.descricao > h1 {
+  font-size: 60px;
 }
 
-.login-btn{
-    width: 10rem;
-    height: 2rem;
-    border: none;
-    border-radius: 8px;
-    background-color: white;
-    font-weight: 500;
-    color: rgb(1,43,119);
+.descricao > p {
+  font-size: 20px;
 }
 
-.rodape-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.login-btn {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 500;
+  color: rgb(1, 43, 119);
 }
 
-.rodape-section>button{
-    width: 10rem;
-    height: 2rem;
-    border: none;
-    border-radius: 8px;
-    background-color: white;
-    font-weight: 500;
-    color: rgb(1,43,119);
-    margin-bottom: .2rem;
+.rodape-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.rodape-section>svg{
-    color: white;
+.rodape-section > button {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 500;
+  color: rgb(1, 43, 119);
+  margin-bottom: 0.2rem;
 }
 
+.rodape-section > svg {
+  color: white;
+}
 
 /*CSS do sobre*/
 
-.sobre{
-    margin: 5rem 0rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    padding: 3rem;
+.sobre {
+  margin: 5rem 0rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 3rem;
 }
 
-.sobre-content{
-    width: 100%;
-    display: flex;
+.sobre-content {
+  width: 100%;
+  display: flex;
 }
 
-.content-texto{
-    width: 40rem;
-    padding: .5rem;
+.content-texto {
+  width: 40rem;
+  padding: 0.5rem;
 }
 
 /*CSS do Cursos*/
 
 .cursos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
 }
 
-.card{
-    padding: .5rem;
-    display: flex;
-    align-items: center;
+.wrapper {
+  max-width: 80%;
+  width: 100%;
+  position: relative;
+}
+.wrapper svg {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 1;
 }
 
-#carouselExample{
-    width: 20rem;
+.wrapper svg:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper svg:first-child {
+  left: -22px;
+}
+.wrapper svg:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: rgb(233, 233, 233);
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  background: rgb(1, 43, 119);
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
 }
 
-.carousel-control-prev-icon{
-    background-color: black;
-    border-radius: 50%;
-    padding: 1.5rem;
-    margin-right: 8rem;
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
 }
 
-.carousel-control-next-icon{
-    background-color: black;
-    border-radius: 50%; 
-    padding: 1.5rem;
-    margin-left: 5rem;
+/*CSS Feedback*/
+
+.feedbacks {
+  margin-top: 6rem;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-.carousel-inner {
-    display: flex;
+.feedbacks h1 {
+  color: rgb(1, 43, 119);
+  font-weight: 700;
+}
+
+.itens {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.card-avaliacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 25rem;
+  text-align: center;
+}
+
+.card-avaliacao img {
+  border-radius: 8px;
+}
+
+.card-avaliacao h4 {
+  margin-top: 2rem;
+  font-weight: 600;
+  color: rgb(1, 43, 119);
+}
+
+/*CSS Recurso premium*/
+
+.recursos-premium {
+  margin-top: 6rem;
+  width: 100%;
+  max-height: 100%;
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.recursos-premium h1 {
+  font-weight: 700;
+}
+
+.recursos-premium p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  color: rgb(2, 59, 165);
+  font-weight: 500;
+  font-size: 20px;
+  width: 25rem;
+}
+
+.box-itens {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-height: 100%;
+}
+
+.info-pacote {
+  background-color: white;
+  width: 30rem;
+  border-radius: 8px;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  color: black;
+}
+
+.info-pacote ul {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.info-pacote li {
+  margin: 0.2rem;
+}
+
+.info-pacote h1 {
+  font-size: 35px;
+  color: rgb(2, 59, 165);
+}
+
+.comprar {
+  background-color: rgb(0, 46, 131);
+  width: 15rem;
+  height: 7rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 3px solid #707070;
+  border-right: 3px solid #707070;
+}
+
+.comprar button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 46, 131);
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comprar button:hover {
+  background-color: #45bb45;
+  color: white;
+}
+
+/*CSS Entre em contato*/
+
+.entre-contato {
+  margin-top: 6rem;
+  width: 100%;
+  max-height: 100%;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.entre-contato .logo-contato {
+  width: 40rem;
+  height: 50%;
+}
+
+.logo-contato {
+  width: 100%;
+  height: 100%;
+}
+
+.entre-contato h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(2, 59, 165);
+  margin-bottom: 2rem;
+}
+
+.entre-contato .itens {
+  width: 60%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-ticket {
+  background-color: rgb(2, 59, 165);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 15rem;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.box-ticket button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: rgb(0, 46, 131);
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.box-ticket button:hover {
+  background-color: #45bb45;
+  color: white;
 }
