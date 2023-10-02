@@ -34,6 +34,16 @@ body {
   margin-left: 10rem;
 }
 
+@media screen and (max-width: 900px) {
+  .nav{
+    max-height: 60rem;
+  }
+  .part-2{
+    flex-direction: column;
+    height:40rem;
+  }
+}
+
 .descricao {
   width: 25rem;
   color: white;
@@ -83,7 +93,6 @@ body {
 
 .sobre {
   margin: 5rem 0rem;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,11 +101,22 @@ body {
   justify-content: center;
   color: black;
   padding: 3rem;
+  background-color: white;
 }
 
 .sobre-content {
   width: 100%;
   display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .sobre{
+    padding: .5rem;
+  }
+  .sobre-content{
+    flex-direction: column;
+    font-size: 19px;
+  }
 }
 
 .content-texto {
@@ -249,6 +269,16 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+  .feedbacks{
+    padding: .5rem;
+    height: 40rem;
+  }
+  .card-avaliacao{
+    font-size: 18px;
+  }
+}
+
 .card-avaliacao img {
   border-radius: 8px;
 }
@@ -351,6 +381,17 @@ body {
   transition: background-color 0.3s ease;
 }
 
+@media screen and (max-width: 900px) {
+  .box-itens{
+    flex-direction: column;
+    height: 50rem;
+  }
+  .comprar button{
+    margin-top: 1rem;
+    padding: 0;
+  }
+}
+
 .comprar button:hover {
   background-color: #45bb45;
   color: white;
@@ -373,6 +414,12 @@ body {
 .entre-contato .logo-contato {
   width: 40rem;
   height: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .entre-contato .logo-contato {
+    width: 20rem;
+  }
 }
 
 .logo-contato {
