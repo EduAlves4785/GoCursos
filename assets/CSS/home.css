@@ -34,16 +34,6 @@ body {
   margin-left: 10rem;
 }
 
-@media screen and (max-width: 900px) {
-  .nav{
-    max-height: 60rem;
-  }
-  .part-2{
-    flex-direction: column;
-    height:40rem;
-  }
-}
-
 .descricao {
   width: 25rem;
   color: white;
@@ -89,6 +79,24 @@ body {
   color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .nav{
+    max-height: 60rem;
+  }
+  .part-2{
+    width: 100%;
+    flex-direction: column;
+    height:40rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .descricao{
+    width: 100%;
+  }
+}
+
+
 /*CSS do sobre*/
 
 .sobre {
@@ -109,19 +117,34 @@ body {
   display: flex;
 }
 
-@media screen and (max-width: 900px) {
-  .sobre{
-    padding: .5rem;
-  }
-  .sobre-content{
-    flex-direction: column;
-    font-size: 19px;
-  }
-}
-
 .content-texto {
   width: 40rem;
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .sobre{
+    padding: .5rem;
+    max-height: 100%;
+  }
+
+  .sobre img{
+    width: 100%;
+    height: 250px;
+  } 
+
+  .sobre-content{
+    flex-direction: column;
+    height: 60rem;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .content-texto{
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /*CSS do Cursos*/
@@ -269,16 +292,6 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-  .feedbacks{
-    padding: .5rem;
-    height: 40rem;
-  }
-  .card-avaliacao{
-    font-size: 18px;
-  }
-}
-
 .card-avaliacao img {
   border-radius: 8px;
 }
@@ -287,6 +300,13 @@ body {
   margin-top: 2rem;
   font-weight: 600;
   color: rgb(1, 43, 119);
+}
+
+@media screen and (max-width: 900px) {
+  .itens {
+    flex-direction: column;
+  }
+  
 }
 
 /*CSS Recurso premium*/
@@ -309,14 +329,14 @@ body {
 
 .recursos-premium p {
   display: flex;
-  text-align: center;
-  align-items: center;
+  justify-content: center;
   background-color: white;
   border-radius: 8px;
   color: rgb(2, 59, 165);
   font-weight: 500;
   font-size: 20px;
   width: 25rem;
+  padding: .5rem;
 }
 
 .box-itens {
@@ -386,6 +406,25 @@ body {
     flex-direction: column;
     height: 50rem;
   }
+
+  .box-itens img{
+    width: 350px;
+    height: 350px;
+  }
+
+  .info-pacote{
+    width: 100%;
+    height: 15rem;
+  }
+
+  .info-pacote li{
+    margin-top: .5rem;
+  }
+
+  .recursos-premium p{
+    width: 100%;
+  }
+
   .comprar button{
     margin-top: 1rem;
     padding: 0;
@@ -414,12 +453,6 @@ body {
 .entre-contato .logo-contato {
   width: 40rem;
   height: 50%;
-}
-
-@media screen and (max-width: 900px) {
-  .entre-contato .logo-contato {
-    width: 20rem;
-  }
 }
 
 .logo-contato {
@@ -457,6 +490,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 2rem;
+  padding: .5rem;
 }
 
 .box-ticket button {
@@ -475,4 +509,16 @@ body {
 .box-ticket button:hover {
   background-color: #45bb45;
   color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .entre-contato{
+    flex-direction: column;
+  }
+  .entre-contato .logo-contato {
+    width: 100%;
+  }
+  .entre-contato .itens {
+    width: 100%;
+  }
 }
