@@ -87,12 +87,16 @@ body {
     width: 100%;
     flex-direction: column;
     height:40rem;
-    padding: 0;
+    padding: 1rem;
     margin: 0;
   }
 
   .descricao{
     width: 100%;
+  }
+
+  .rodape-section{
+    margin-top: 3rem;
   }
 }
 
