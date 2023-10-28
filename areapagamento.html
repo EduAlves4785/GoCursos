@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/CSS/areapagamento.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Go-Cursos</title>
+  </head>
+  <body>
+    <nav>
+      <div class="itens">
+        <div class="userbtn">
+          <div class="image-container">
+            <img src="./assets/img/japa.png" alt="foto de usuário" />
+          </div>
+          <button>Meu perfil</button>
+        </div>
+        <button>Meus cursos</button>
+        <button>Postagens</button>
+        <button>Suporte</button>
+      </div>
+      <img
+        class="logo"
+        src="./assets/img/logo.png"
+        alt="Logo da go cursos"
+        width="100px"
+      />
+    </nav>
+    <section class="Pagamento-Content">
+        <div class="pagamento">
+            <h5>PAGAMENTO</h5>
+            <div class="box-cartao">
+                <div class="cartao-dados">
+                    <input type="radio"/>
+                    <p>Cartão de crédito</p>
+                </div>
+                <div class="cartao-dados-2">
+                    <label>Número do cartão</label>
+                    <input type="text">
+                </div>
+                <div class="cartao-dados-3">
+                    <div>
+                        <label>Data vencimento</label>
+                    <input type="month" id="mes-ano" name="mes-ano" min="2023-01" max="2030-12">
+                    </div>
+                    <div>
+                        <label>Código de segurança</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="check1">
+                    <input type="checkbox" name="" id="">
+                    <p>Dados do portador iguais aos pessoais</p>
+                </div> 
+                <div class="check2">
+                    <input type="checkbox" name="" id="">
+                    <p>Dados de cobrança iguais aos da entrega</p>
+                </div>               
+            </div>
+            <div class="boleto-check">
+                <input type="radio">
+                <p>Boleto</p>
+            </div>
+            <button class="btn-voltar">VOLTAR</button>
+            <button class="btn-confirmar">CONFIRMAR DADOS</button>
+        </div>
+        <div class="resultado">
+            <h4>RESUMO</h4>
+            <div class="produtos">
+                <h6>Ativar o premium</h6>
+                <p>R$ 100,00</p>
+            </div>
+            <div>
+                <strong><p>Total</p></strong>
+                <p>R$ 100,00</p>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

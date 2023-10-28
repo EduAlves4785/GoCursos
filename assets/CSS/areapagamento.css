@@ -1,0 +1,278 @@
+body {
+  background-image: url("../img/fundo-azul.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  padding: none;
+  margin: none;
+}
+
+/*Navbar*/
+
+nav {
+  width: 100%;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0rem 1rem;
+}
+
+.userbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 15rem;
+  max-height: 100%;
+  background-color: rgb(2, 80, 170);
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+}
+
+.userbtn button {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 50%;
+  font-weight: 500;
+  height: 3rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid rgb(1, 43, 119);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.image-container {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  padding-left: 1rem;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100%;
+}
+
+.itens {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.itens button {
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 8rem;
+  height: 3rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid rgb(1, 43, 119);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.itens button:hover {
+  background-color: rgb(1, 43, 119);
+  color: white;
+  border-color: white;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+}
+
+nav .logo {
+  right: 0;
+  margin-left: 25rem;
+}
+
+/*Pagamento*/
+
+.Pagamento-Content {
+  background-color: white;
+  width: 55%;
+  height: 31.5rem;
+  display: flex;
+  margin: 1rem 20%;
+}
+
+.pagamento {
+  width: 70%;
+  padding: .5rem;
+}
+
+.box-cartao {
+  padding: 1rem;
+  color: rgb(63, 63, 63); 
+  border: .5px solid gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cartao-dados {
+    display: flex;
+    align-items: center;
+    max-width: 15rem;
+    height: 2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.cartao-dados p {
+    margin: 0 1rem; /* Remova as margens padrão do parágrafo */
+}
+
+.cartao-dados-2{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    max-height: 100%;
+    margin-bottom: 1rem;
+}
+
+.cartao-dados-2 input{
+    border: 1px solid rgb(187, 189, 194);
+    margin: .2rem 0rem;
+    height: 2rem;
+}
+
+.cartao-dados-3{
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    max-height: 100%;
+    padding: .2rem;
+    margin-bottom: 1rem;
+}
+
+.cartao-dados-3 input{
+    width: 8rem;
+    height: 3rem;
+    border: 1px solid rgb(187, 189, 194);
+}
+
+.cartao-dados-3>:last-child{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    max-height: 100%;
+}
+
+.cartao-dados-3>:last-child>input{
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid rgb(187, 189, 194);
+}
+
+.check1 {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.check1 p {
+    margin: 0 1rem; /* Remova as margens padrão do parágrafo */
+}
+
+.check2 {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+.check2 p {
+    margin: 0 1rem; /* Remova as margens padrão do parágrafo */
+}
+
+.boleto-check{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    margin-top: .5rem;
+    height: 2rem;
+    padding: .2rem;
+    margin-bottom: 1rem;
+    padding-left: 5rem;
+}
+
+.boleto-check p {
+    font-size: 20px;
+    margin: 0 1rem;
+    color: rgb(63, 63, 63); 
+}
+
+.btn-voltar{
+    color:rgb(181,175,221) ;
+    cursor: pointer;
+    width: 7rem;
+    background-color: transparent;
+    padding:.5rem;
+    border: 1px solid rgb(181,175,221);
+    transition: 0.3s;
+}
+
+.btn-voltar:hover{
+    background-color: RGB(90 116 193);
+    color: white;
+}
+
+.btn-confirmar{
+    color:rgb(234,237,246) ;
+    cursor: pointer;
+    width: 12rem;
+    height: 2.5rem;
+    background-color: rgb(194,197,203);
+    padding:.5rem;
+    border: none;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.btn-confirmar:hover{
+    background-color: RGB(90 116 193);
+}
+
+/*Extrato css*/
+
+.resultado{
+    width: 30%;
+    padding: 1rem;
+    color: rgb(91,95,97);
+}
+
+.resultado h4{
+    border-bottom: 2px solid rgb(202, 202, 202); /* Adiciona uma borda cinza de 2px na parte inferior */
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.produtos{
+    margin-bottom: 1rem; 
+    border-bottom: 2px solid rgb(202, 202, 202); /* Adiciona uma borda cinza de 2px na parte inferior */
+    padding-bottom: 10px;
+}
+
+.produtos p{
+    color: rgb(149,153,156);
+}
