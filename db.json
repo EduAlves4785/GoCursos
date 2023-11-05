@@ -1,0 +1,11 @@
+{
+    "cursos": [
+      { "id": 1,"nome":"Pacote Office", "video": "https://www.youtube.com/embed/VFQ6BqDDePM","duracao":2},
+      { "id": 2,"nome":"Marketing Digital", "video": "https://www.youtube.com/embed/_kx8wThTGIw","duracao":1},
+      { "id": 3,"nome":"Culinária", "video": "https://www.youtube.com/embed/8FYfy33SAeA","duracao":0.30},
+      { "id": 4,"nome":"Data Lake", "video": "https://www.youtube.com/embed/tksVxHYO_kg","duracao":2},
+      { "id": 5,"nome":"Python",  "video": "https://www.youtube.com/embed/BxMtSb2w9Sk","duracao":4},
+      { "id": 6,"nome":"Node JS", "video": "https://www.youtube.com/embed/hHM-hr9q4mo","duracao":1.30},
+      { "id": 7,"nome":"Teste", "video": "","duracao": 0.0000027778}
+    ]
+  }

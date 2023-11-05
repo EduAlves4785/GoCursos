@@ -1,5 +1,5 @@
 import express from "express";
-import { getUsers,addUser,updateUser,deleteUser,getCursos } from "../controllers/user.js";
+import { getUsers,addUser,updateUser,deleteUser,getCursos,realizarCurso,getUserCursos } from "../controllers/user.js";
 
 const router = express.Router()
 
@@ -16,6 +16,14 @@ router.delete("/deletar/:cpf",deleteUser)
 //Rotas dos cursos
 
 router.get("/cursos/curso",getCursos)
+
+// Trazer usuários e cursos que estão realizando
+
+router.get('/cursos/alunocursos',getUserCursos)
+
+//Rota de realizar curso
+
+router.post("/cursos/realizar",realizarCurso)
 
 
 export default router

@@ -204,8 +204,9 @@ btnFiltrar2.addEventListener("click", () => {
           <div class="img">
             <img src="./assets/img/curso${curso.id_curso}.png"  alt="Imagem curso">
           </div>
+          <h2>Duração ${curso.duracao}h</h2>
           <h2>${curso.nome_curso}</h2>
-          <button>Realizar curso</button>
+          <button onclick="redirecionarParaCurso(${curso.id_curso})">Realizar curso</button>
         </div>`;
     });
   } else {
@@ -227,3 +228,11 @@ btnFiltro.addEventListener("click", () => {
     btnFiltrar2.style.display = "none";
   }
 });
+
+//Lógica ir na página do curso específico
+
+function redirecionarParaCurso(numeroCurso) {
+  // Construa a URL da página com base no número do curso
+  const paginaCurso = `telacurso.html?curso=${numeroCurso}`;
+  window.location.href = paginaCurso;
+}

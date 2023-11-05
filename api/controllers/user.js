@@ -78,3 +78,34 @@ export const getCursos = (_, res) => {
     return res.status(200).json(data);
   });
 };
+
+//Controllers de realizar curso
+export const realizarCurso = (req, res) => {
+  const q =
+    "INSERT INTO AlunoCursos(`aluno_id`,`curso_id`, `status`) VALUES(?)";
+
+  const values = [
+    req.body.aluno_id,
+    req.body.curso_id,
+    req.body.status,
+  ];
+
+  db.query(q, [values], (err) => {
+    if (err) return res.json(err);
+
+    return res.status(200).json("Usuário criado com sucesso.");
+  });
+};
+
+// Trazer usuários e cursos que estão realizando
+
+export const getUserCursos = (req, res) => {
+
+  const q = "select * from AlunoCursos";
+
+  db.query(q, (err, data) => {
+    if (err) return res.json(err);
+
+    return res.status(200).json(data);
+  });
+};

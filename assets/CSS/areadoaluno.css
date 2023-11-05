@@ -227,7 +227,7 @@ nav .logo {
   justify-content: center;
   overflow: hidden;
   width:80%; 
-  height: 20rem;
+  height: 23rem;
   margin: 0 auto;
 }
 
@@ -240,7 +240,7 @@ nav .logo {
 .card {
   flex: 0 0 33.33%; /* Exibe três cartões por vez */
   width: 8rem;
-  height: 15rem; /* Altura dos cartões */
+  height: 17rem; /* Altura dos cartões */
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   display: flex;
