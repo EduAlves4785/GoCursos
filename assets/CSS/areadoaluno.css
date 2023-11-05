@@ -6,7 +6,7 @@ body {
 
 /*Navbar*/
 
-nav{
+nav {
   width: 100%;
   height: 7.5rem;
   display: flex;
@@ -16,19 +16,19 @@ nav{
   padding: 0rem 1rem;
 }
 
-.userbtn{
+.userbtn {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 15rem;
-  max-height:100% ;
-  background-color: rgb(2,80,170);;
-  padding: .5rem;
+  max-height: 100%;
+  background-color: rgb(2, 80, 170);
+  padding: 0.5rem;
   border-radius: 8px;
-  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
-.userbtn button{
+.userbtn button {
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -39,37 +39,43 @@ nav{
   font-weight: 500;
   height: 3rem;
   cursor: pointer;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   padding: 1rem;
-  border-bottom: 2px solid rgb(1,43,119);
+  border-bottom: 2px solid rgb(1, 43, 119);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .image-container {
   background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
-  overflow: hidden; 
-  padding-left: 1rem;
+  overflow: hidden;
+  padding: 0.2rem;
 }
 
-.image-container img {
-  width: 100px;
+figure {
+  width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.itens{
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itens {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 60%;
 }
 
-.itens button{
+.itens button {
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -80,42 +86,42 @@ nav{
   width: 8rem;
   height: 3rem;
   cursor: pointer;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   padding: 1rem;
-  border-bottom: 2px solid rgb(1,43,119);
+  border-bottom: 2px solid rgb(1, 43, 119);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .itens button:hover {
-  background-color: rgb(1, 43, 119); 
-  color: white; 
+  background-color: rgb(1, 43, 119);
+  color: white;
   border-color: white;
-  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
-nav .logo{
+nav .logo {
   right: 0;
   margin-left: 25rem;
 }
 
 /*Filtro container*/
 
-.box-filtro{
+.box-filtro {
   max-width: 100%;
   display: none;
 }
 
-.box-filtro div{
+.box-filtro div {
   background-color: white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.filtro-content{
+.filtro-content {
   width: 100%;
   height: 11rem;
   height: 15rem;
@@ -126,9 +132,9 @@ nav .logo{
   margin-bottom: 2rem;
 }
 
-.pesquisa-box{
+.pesquisa-box {
   background-color: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -137,46 +143,49 @@ nav .logo{
   height: 8rem;
 }
 
-.pesquisa-box h3{
-  color: rgb(3,94,193);
+.pesquisa-box h3 {
+  color: rgb(3, 94, 193);
   font-size: 20px;
   font-weight: 500;
 }
 
-.pesquisa-box input{
+.pesquisa-box input {
   width: 18rem;
   height: 2.5rem;
   border: 2px solid black;
   border-radius: 8px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.pesquisa-box button{
+.pesquisa-box button {
   margin-top: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: rgb(3,94,193);
+  background-color: rgb(3, 94, 193);
   color: white;
   font-weight: 500;
   cursor: pointer;
 }
 
-
-#btn-filtrar{
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+.btn-filtrar {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   border: none;
   border-radius: 5px;
-  background-color: rgb(3,94,193);
+  background-color: rgb(3, 94, 193);
   color: white;
   font-weight: 500;
   cursor: pointer;
 }
 
-.filtro-btn{
+#btn-filtrar-aberto{
+  display: none;
+}
+
+.filtro-btn {
   background-color: white;
   border: none;
-  color: rgb(3,94,193);
+  color: rgb(3, 94, 193);
   font-weight: 500;
   cursor: pointer;
   width: 8rem;
@@ -188,15 +197,14 @@ nav .logo{
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s;
-  
 }
 
 .filtro-btn:hover {
-  box-shadow: -13px 8px 5px -3px rgba(0,0,0,0.75);
+  box-shadow: -13px 8px 5px -3px rgba(0, 0, 0, 0.75);
 }
 
 /*Cursos*/
-.cursos{
+.cursos {
   background-color: white;
   width: 100%;
   max-height: 100%;
@@ -204,100 +212,110 @@ nav .logo{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
-.cursos h3{
-  color: rgb(3,94,193);
+.cursos h3 {
+  color: rgb(3, 94, 193);
   font-weight: 500;
 }
 
 /*Carousel*/
-.wrapper {
-  max-width: 80%;
-  width: 100%;
-  position: relative;
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  overflow: hidden;
+  width:80%; 
+  height: 20rem;
+  margin: 0 auto;
 }
 
-.wrapper svg {
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-  z-index: 1;
+.carousel {
+  display: flex;
+  max-width: 100%;
+  transition: transform 0.3s ease;
 }
 
-.wrapper svg:active {
-  transform: translateY(-50%) scale(0.85);
-}
-.wrapper svg:first-child {
-  left: -22px;
-}
-.wrapper svg:last-child {
-  right: -22px;
-}
-.wrapper .carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  border-radius: 8px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-.carousel.dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-.carousel :where(.card, .img) {
+.card {
+  flex: 0 0 33.33%; /* Exibe três cartões por vez */
+  width: 8rem;
+  height: 15rem; /* Altura dos cartões */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: .5rem;
 }
-.carousel .card {
-  scroll-snap-align: start;
-  height: 300px;
-  list-style: none;
-  background: rgb(233, 233, 233);
-  cursor: pointer;
-  padding-bottom: 15px;
-  flex-direction: column;
-  border-radius: 8px;
-}
-.carousel .card .img {
-  background: rgb(1, 43, 119);
-  height: 148px;
-  width: 148px;
+
+.card .img {
+  width: 10rem;
+  height: 10rem;
+  background-color: RGB(2 50 132);
   border-radius: 50%;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card .img img {
-  width: 140px;
-  height: 140px;
+
+.img img{
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid #fff;
 }
-.carousel .card h2 {
+
+.card button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+  transition: box-shadow 0.3s ease; 
   font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
+  font-size: 19px;
 }
+
+.card button:hover{
+  box-shadow: none; 
+}
+
+.carousel-button {
+  cursor: pointer;
+}
+
+.botoes-box{
+  margin: 1rem;
+}
+
+.botoes-box button{
+  border: none;
+  width: 10rem;
+  font-size: 18px;
+  background-color: RGB(3 101 195);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.error-message{
+  color: rgb(255, 91, 91);
+  font-weight: 700;
+  font-size: 18px;
+
+}
+
+/* Erro sem parametro */
+.erro-div{
+  margin: 9rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+}
+

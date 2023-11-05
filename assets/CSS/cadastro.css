@@ -1,79 +1,76 @@
-body{    
-    background-image:url('../img/fundo-azul.png');
-    background-size: cover;
-    background-repeat:no-repeat ;
-    font-family: 'Roboto', sans-serif;
-    
+body {
+  background-image: url("../img/fundo-azul.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
 }
 
-body a{
-    text-decoration: none; 
-    color: inherit;
+body a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*CSS tela de cadastro*/
 
-.icon{
-    color: white;
-    margin: 2rem 4rem;
-    
+.icon {
+  color: white;
+  margin: 2rem 4rem;
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-
-.nav{
-    display: flex;
-    flex-direction: column;
+.nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.part-2{
-    display: center;
-    text-align: center;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    width: 30rem;  
-
+.part-2 {
+  display: center;
+  text-align: center;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 30rem;
 }
 
-
-.titulo{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color:rgb(1,43,119);
+.titulo {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: rgb(1, 43, 119);
 }
 
 /*Aplica CSS nos INPUTS*/
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 5px solid rgb(1,43,119);
-            border-radius: 20px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-        }
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 5px solid rgb(1, 43, 119);
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
 
-    input[type="submit"],
-    button {
-            background-color: rgb(1,43,119);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-        }
+#btn-cadastro,
+button {
+  background-color: rgb(1, 43, 119);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
 
-
-
+.error-message{
+    color: rgb(255, 97, 97);
+    font-size: 15px;
+    font-weight: 700;
+}

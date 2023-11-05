@@ -1,17 +1,16 @@
 import { db } from "../db.js";
 
 export const getUsers = (req, res) => {
-
-  if(req.params.cpf){
+  if (req.params.cpf) {
     const q = "select * from Cadastro WHERE `cpf` = ?";
 
-    db.query(q, [req.params.cpf], (err,data) => {
+    db.query(q, [req.params.cpf], (err, data) => {
       if (err) return res.json(err);
-  
+
       return res.status(200).json(data);
     });
 
-    return
+    return;
   }
 
   const q = "select * from Cadastro";
@@ -66,5 +65,16 @@ export const deleteUser = (req, res) => {
     if (err) return res.json(err);
 
     return res.status(200).json("Usuário deletado com sucesso.");
+  });
+};
+
+//Controllers dos cursos
+export const getCursos = (_, res) => {
+  const q = "select * from Curso";
+
+  db.query(q, (err, data) => {
+    if (err) return res.json(err);
+
+    return res.status(200).json(data);
   });
 };

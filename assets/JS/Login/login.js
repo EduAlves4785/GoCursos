@@ -41,9 +41,13 @@ function validateForm() {
   fetch(url)
     .then((resp) => resp.json())
     .then((data) => {
-    console.log(data[0].senha)
+      console.log(data[0].senha);
       if (data[0].senha === senha.value) {
-        window.location.href = "areadoaluno.html";
+        const cpfUser = cpf.value; 
+
+        const urlFinal = `areadoaluno.html?cpf=${cpfUser}`;
+
+        window.location.href = urlFinal;
       } else {
         senhaError.textContent = "Senha ou usuário inválidos";
       }
