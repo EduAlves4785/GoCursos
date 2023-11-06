@@ -20,6 +20,13 @@ meuperfilBtn.addEventListener('click',()=>{
   window.location.href = `Perfil Auno - sem licença.html?cpf=${parametro}`;
 })
 
+//Redirecionar para meus cursos
+const meusCursosBtn=document.getElementById("meuscursos-btn")
+meusCursosBtn.addEventListener('click',()=>{
+  window.location.href = `perfilaluno.html?cpf=${parametro}`;
+})
+
+
 
 //Lógica do filtro
 const boxFiltro = document.getElementById("boxFiltro");
@@ -134,7 +141,15 @@ const conteudoCursos = `
       <h2>Node JS</h2>
       <button>Realizar curso</button>
     </div>
-  </div>
+    <div class="card">
+        <div class="img">
+          <img src="./assets/img/curso7.png" alt="Imagem curso">
+        </div>
+          <h2>Duração 1s</h2>
+          <h2>Curso teste</h2>
+          <button onclick="redirecionarParaCurso(7,'Curso teste')">Realizar curso</button>
+        </div>
+    </div>
 `;
 
 const carouselContainer = document.getElementById("carousel-container");
@@ -206,7 +221,7 @@ btnFiltrar2.addEventListener("click", () => {
           </div>
           <h2>Duração ${curso.duracao}h</h2>
           <h2>${curso.nome_curso}</h2>
-          <button onclick="redirecionarParaCurso(${curso.id_curso})">Realizar curso</button>
+          <button onclick="redirecionarParaCurso(${curso.id_curso},${curso.nome_curso})">Realizar curso</button>
         </div>`;
     });
   } else {
@@ -231,8 +246,45 @@ btnFiltro.addEventListener("click", () => {
 
 //Lógica ir na página do curso específico
 
-function redirecionarParaCurso(numeroCurso) {
+function redirecionarParaCurso(numeroCurso,nomeCurso) {
+
+  //Contabilizar curso que será realizado
+  const urlAlunoCurso=`http://localhost:8800/cursos/realizar`
+  function cadastrarCurso(aluno_id) {
+    fetch(urlAlunoCurso, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        aluno_id:aluno_id,
+        curso_id:numeroCurso,
+        status:"Cursando"
+      }),
+    })
+      .then((resp) => resp.json())
+      .catch((e) => console.log("Erro no servidor: " + e));
+  }
+
+  const dataUser = [];
+
+  function getUser() {
+   const url = `http://localhost:8800/${parametro}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        dataUser.push(...data);
+        cadastrarCurso(dataUser[0].id)
+      });
+  }
+
+  getUser()
+
   // Construa a URL da página com base no número do curso
-  const paginaCurso = `telacurso.html?curso=${numeroCurso}`;
+  const paginaCurso = `telacurso.html?curso=${numeroCurso}&nomeCurso=${nomeCurso}&cpf=${parametro}`;
   window.location.href = paginaCurso;
 }
+
+
+

@@ -109,3 +109,21 @@ export const getUserCursos = (req, res) => {
     return res.status(200).json(data);
   });
 };
+
+//Concluir curso
+
+export const updateCurso = (req, res) => {
+  const q =
+    "UPDATE AlunoCursos SET `status` = 'Concluído' WHERE `aluno_id` = ? AND `curso_id` = ?";
+
+  const values = [
+    req.body.aluno_id,
+    req.body.curso_id,
+  ];
+
+  db.query(q, [...values], (err) => {
+    if (err) return res.json(err);
+
+    return res.status(200).json("Usuário atualizado com sucesso.");
+  });
+}

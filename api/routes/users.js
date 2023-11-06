@@ -1,5 +1,5 @@
 import express from "express";
-import { getUsers,addUser,updateUser,deleteUser,getCursos,realizarCurso,getUserCursos } from "../controllers/user.js";
+import { getUsers,addUser,updateUser,deleteUser,getCursos,realizarCurso,getUserCursos,updateCurso } from "../controllers/user.js";
 
 const router = express.Router()
 
@@ -25,5 +25,7 @@ router.get('/cursos/alunocursos',getUserCursos)
 
 router.post("/cursos/realizar",realizarCurso)
 
+//Atualizar status do curso
+router.put("/cursos/atualizar",updateCurso)
 
 export default router

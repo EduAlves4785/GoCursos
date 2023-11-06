@@ -38,82 +38,68 @@
     </nav>
     <section class="cursos">
       <h3>CURSOS</h3>
-      <div class="wrapper">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="white"
-          class="bi bi-arrow-left-circle-fill"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
-          />
-        </svg>
-        <ul class="carousel">
-          <li class="card">
+      <div id="carousel-container" class="carousel-container">
+        <div class="carousel">
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso1.png" alt="Imagem curso" />
+              <img src="./assets/img/curso1.png" alt="Imagem curso">
             </div>
+            <h2>Duração 2h</h2>
             <h2>Pacote office</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-          <li class="card">
+            <button onclick="redirecionarParaCurso(1,'Pacote office')">Realizar curso</button>
+          </div>
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso2.jpg" alt="Imagem curso" />
+              <img src="./assets/img/curso2.png" alt="Imagem curso">
             </div>
+            <h2>Duração 3h</h2>
             <h2>Marketing digital</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-          <li class="card">
+            <button onclick="redirecionarParaCurso(2,'Marketing digital')">Realizar curso</button>
+          </div>
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso3.png" alt="Imagem curso" />
+              <img src="./assets/img/curso3.png" alt="Imagem curso">
             </div>
+            <h2>Duração 2h</h2>
             <h2>Culinária</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-          <li class="card">
+            <button onclick="redirecionarParaCurso(3,'Culinária')">Realizar curso</button>
+          </div>
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso4.png" alt="Imagem curso" />
+              <img src="./assets/img/curso4.png" alt="Imagem curso">
             </div>
+            <h2>Duração 4h</h2>
             <h2>Data Lake</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-          <li class="card">
+            <button onclick="redirecionarParaCurso(4,'Data Lake')">Realizar curso</button>
+          </div>
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso5.png" alt="Imagem curso" />
+              <img src="./assets/img/curso5.png" alt="Imagem curso">
             </div>
+            <h2>Duração 3h</h2>
             <h2>Python</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-          <li class="card">
+            <button onclick="redirecionarParaCurso(5,'Python')">Realizar curso</button>
+          </div>
+          <div class="card">
             <div class="img">
-              <img src="./assets/img/curso6.jpg" alt="Imagem curso" />
+              <img src="./assets/img/curso6.png" alt="Imagem curso">
             </div>
+            <h2>Duração 3h</h2>
             <h2>Node JS</h2>
-            <h3>Continuar Curso</h3>
-            <button>GO</button>
-          </li>
-        </ul>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="white"
-          class="bi bi-arrow-right-circle-fill"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
-          />
-        </svg>
-      </div>
+            <button onclick="redirecionarParaCurso(6,'Node JS')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso7.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 1s</h2>
+            <h2>Curso teste</h2>
+            <button onclick="redirecionarParaCurso(7,'Curso teste')">Realizar curso</button>
+          </div>
+          <div id="botoes-box" class="botoes-box">
+            <button class="carousel-button" id="prev">Anterior</button>
+            <button class="carousel-button" id="next">Próximo</button>
+          </div>
     </section>
     <script src="./assets/JS/areadoaluno.js"></script>
     <script src="./assets/JS/index.js"></script>
