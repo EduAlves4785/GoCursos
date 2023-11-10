@@ -3,7 +3,7 @@ const url = new URL(window.location.href);
 
 const parametro = url.searchParams.get("cpf");
 
-if (parametro === null || '') {
+if (parametro === null || "") {
   document.querySelector("body").innerHTML = `
   <div class="erro-div">
 
@@ -11,22 +11,20 @@ if (parametro === null || '') {
     <h3>Ocorreu um erro inesperado,tente entrar novamente.</h3>
 
   </div>
-  `
+  `;
 }
 
 //Redirecionar para o perfil com parametro na url
-const meuperfilBtn=document.getElementById("meuperfil-btn")
-meuperfilBtn.addEventListener('click',()=>{
+const meuperfilBtn = document.getElementById("meuperfil-btn");
+meuperfilBtn.addEventListener("click", () => {
   window.location.href = `Perfil Auno - sem licença.html?cpf=${parametro}`;
+});
+
+//Redireciona para suporte
+const suporteBtn=document.getElementById("suporte-btn")
+suporteBtn.addEventListener('click',()=>{
+  window.location.href = `suporte.html`;
 })
-
-//Redirecionar para meus cursos
-const meusCursosBtn=document.getElementById("meuscursos-btn")
-meusCursosBtn.addEventListener('click',()=>{
-  window.location.href = `perfilaluno.html?cpf=${parametro}`;
-})
-
-
 
 //Lógica do filtro
 const boxFiltro = document.getElementById("boxFiltro");
@@ -81,6 +79,49 @@ prevButton.addEventListener("click", prevCard);
 nextButton.addEventListener("click", nextCard);
 
 showCard(currentIndex);
+
+//Lógica ir na página do curso específico
+
+function redirecionarParaCurso(numeroCurso, nomeCurso) {
+  //Contabilizar curso que será realizado
+  const urlAlunoCurso = `http://localhost:8800/cursos/realizar`;
+  function cadastrarCurso(aluno_id) {
+    fetch(urlAlunoCurso, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        aluno_id: aluno_id,
+        curso_id: numeroCurso,
+        status: "Cursando",
+      }),
+    })
+      .then((resp) => resp.json())
+      .then(() => {
+        // Após cadastrar o curso, redirecione para a página correta
+        const paginaCurso = `telacurso.html?curso=${numeroCurso}&nomeCurso=${nomeCurso}&cpf=${parametro}`;
+        window.location.href = paginaCurso;
+      })
+      .catch((e) => console.log("Erro no servidor: " + e));
+  }
+
+  const dataUser = [];
+
+  function getUser() {
+    const url = `http://localhost:8800/${parametro}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        dataUser.push(...data);
+        cadastrarCurso(dataUser[0].id);
+      });
+  }
+
+  getUser();
+
+}
 
 // Lógica do filtro funcionalidades
 const dataCursos = [];
@@ -157,6 +198,7 @@ const btnFiltrar = document.getElementById("btn-filtrar");
 const errorMessage = document.getElementById("error-message");
 
 btnFiltrar.addEventListener("click", () => {
+
   const btnBox = document.getElementById("botoes-box");
   const nomeCurso = document.getElementById("nome-curso").value;
 
@@ -169,12 +211,13 @@ btnFiltrar.addEventListener("click", () => {
   if (cursoProcurado) {
     carouselContainer.innerHTML = `
     <div class="card">
-      <div class="img">
-        <img src="./assets/img/curso${cursoProcurado.id_curso}.png" alt="Imagem curso">
-      </div>
-      <h2>${cursoProcurado.nome_curso}</h2>
-      <button>Realizar curso</button>
-    </div>`;
+        <div class="img">
+          <img src="./assets/img/curso${cursoProcurado.id_curso}.png"  alt="Imagem curso">
+        </div>
+        <h2>Duração ${cursoProcurado.duracao}h</h2>
+        <h2>${cursoProcurado.nome_curso}</h2>
+        <button onclick="redirecionarParaCurso(${cursoProcurado.id_curso},${cursoProcurado.nome_curso})">Realizar curso</button>
+      </div>`;
   } else {
     carouselContainer.innerHTML = `
   <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -211,9 +254,9 @@ btnFiltrar2.addEventListener("click", () => {
     }
   });
 
-  if (cursosEncontrados.length>0) {
+  if (cursosEncontrados.length > 0) {
     carouselContainer.innerHTML = ""; // Limpe o conteúdo anterior
-    cursosEncontrados.forEach(curso => {
+    cursosEncontrados.forEach((curso) => {
       carouselContainer.innerHTML += `
         <div class="card">
           <div class="img">
@@ -244,47 +287,10 @@ btnFiltro.addEventListener("click", () => {
   }
 });
 
-//Lógica ir na página do curso específico
+//Passa parametros para meus cursos
+const meuscursosBtn = document.getElementById("meuscursos-btn");
 
-function redirecionarParaCurso(numeroCurso,nomeCurso) {
-
-  //Contabilizar curso que será realizado
-  const urlAlunoCurso=`http://localhost:8800/cursos/realizar`
-  function cadastrarCurso(aluno_id) {
-    fetch(urlAlunoCurso, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        aluno_id:aluno_id,
-        curso_id:numeroCurso,
-        status:"Cursando"
-      }),
-    })
-      .then((resp) => resp.json())
-      .catch((e) => console.log("Erro no servidor: " + e));
-  }
-
-  const dataUser = [];
-
-  function getUser() {
-   const url = `http://localhost:8800/${parametro}`;
-
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        dataUser.push(...data);
-        cadastrarCurso(dataUser[0].id)
-      });
-  }
-
-  getUser()
-
-  // Construa a URL da página com base no número do curso
-  const paginaCurso = `telacurso.html?curso=${numeroCurso}&nomeCurso=${nomeCurso}&cpf=${parametro}`;
-  window.location.href = paginaCurso;
-}
-
-
-
+meuscursosBtn.addEventListener("click", () => {
+  const urlFinal = `meuscursos.html?cpf=${parametro}`;
+  window.location.href = urlFinal;
+});

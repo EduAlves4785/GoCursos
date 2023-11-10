@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/JS/html2pdf.min.js"></script>
+    <script src="./assets/JS/jspdf.min.js"></script>
+    <script src="./assets/JS/html2canvas.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/CSS/perfilaluno.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Go-Cursos</title>
+  </head>
+  <body>
+    <nav>
+      <div class="itens">
+        <div class="userbtn">
+          <div class="image-container">
+            <figure>
+              <img src="./assets/img/person.png" alt="foto de usuário"/>
+            </figure>
+          </div>
+          <button onclick="perfilAcessar()">Meu perfil</button>
+        </div>
+        <button onclick="AreaCursos()">Area do aluno</button>
+        <button onclick="Suporte()">Suporte</button>
+      </div>
+      <img
+        class="logo"
+        src="./assets/img/logo.png"
+        alt="Logo da go cursos"
+        width="100px"
+      />
+    </nav>
+    <section class="cursos">
+      <h3>CURSOS</h3>
+      <div id="carousel-container" class="carousel-container">
+        <div class="carousel">
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso1.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 2h</h2>
+            <h2>Pacote office</h2>
+            <button onclick="redirecionarParaCurso(1,'Pacote office')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso2.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 3h</h2>
+            <h2>Marketing digital</h2>
+            <button onclick="redirecionarParaCurso(2,'Marketing digital')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso3.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 2h</h2>
+            <h2>Culinária</h2>
+            <button onclick="redirecionarParaCurso(3,'Culinária')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso4.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 4h</h2>
+            <h2>Data Lake</h2>
+            <button onclick="redirecionarParaCurso(4,'Data Lake')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso5.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 3h</h2>
+            <h2>Python</h2>
+            <button onclick="redirecionarParaCurso(5,'Python')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso6.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 3h</h2>
+            <h2>Node JS</h2>
+            <button onclick="redirecionarParaCurso(6,'Node JS')">Realizar curso</button>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./assets/img/curso7.png" alt="Imagem curso">
+            </div>
+            <h2>Duração 1s</h2>
+            <h2>Curso teste</h2>
+            <button onclick="redirecionarParaCurso(7,'Curso teste')">Realizar curso</button>
+          </div>
+        </div>
+      </div>
+      <div id="botoes-box" class="botoes-box">
+        <button class="carousel-button" id="prev">Anterior</button>
+        <button class="carousel-button" id="next">Próximo</button>
+      </div>
+    </section>
+    <script src="./assets/JS/meuscursos.js"></script>
+  </body>
+</html>

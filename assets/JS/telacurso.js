@@ -13,6 +13,19 @@ if (parametro === null || "") {
   </div>
   `;
 }
+function perfilAcessar(){
+  window.location.href = `Perfil Auno - sem licença.html?cpf=${cpf}`;
+}
+
+function Suporte(){
+  window.location.href = `suporte.html`;
+}
+
+function AreaCursos(){
+  window.location.href = `areadoaluno.html?cpf=${cpf}`;
+}
+
+
 //Pegar nome do usuário
 const nomeAluno = [];
 

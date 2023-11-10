@@ -114,7 +114,7 @@ nav .logo {
 }
 
 .pagamento {
-  width: 70%;
+  width: 100%;
   padding: .5rem;
 }
 
@@ -129,7 +129,7 @@ nav .logo {
 .cartao-dados {
     display: flex;
     align-items: center;
-    max-width: 15rem;
+    max-width: 20rem;
     height: 2rem;
     padding: .5rem;
     margin-bottom: 1rem;
@@ -275,4 +275,47 @@ nav .logo {
 
 .produtos p{
     color: rgb(149,153,156);
+}
+
+#erro-numero-cartao{
+  color: rgb(255, 133, 133);
+}
+
+#erro-codigo-seguranca{
+  color: rgb(255, 133, 133);
+}
+
+.Pagamento-Content {
+  background-color: white;
+  width: 75%; /* Aumente a largura para ajustar o conteúdo */
+  height: auto; /* Use altura automática para ajustar o conteúdo */
+  display: flex;
+  margin: 1rem auto; /* Centralize horizontalmente com margem automática */
+  padding: 2rem; /* Aumente o preenchimento para separar os elementos */
+  justify-content: space-between; /* Espaçamento entre os elementos */
+}
+
+/* ... (O restante do seu CSS) */
+
+.cartao-dados {
+  display: flex;
+  align-items: center;
+  max-width: 15rem;
+  height: auto; /* Use altura automática */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ... (O restante do seu CSS) */
+
+.boleto-check {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 5rem;
+  width: 100%; /* Use 100% de largura para ocupar todo o espaço disponível */
+  box-sizing: border-box; /* Evite que a borda aumente a largura total */
 }

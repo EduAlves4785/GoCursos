@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/JS/html2pdf.min.js"></script>
+    <script src="./assets/JS/jspdf.min.js"></script>
+    <script src="./assets/JS/html2canvas.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -37,11 +40,35 @@
       />
     </nav>
     <section>
-        <div>
-            <h3>Seu pagamento está sendo processado</h3>
-            <img src="./assets/img/relogio.png" alt="Icone de relogio" width="250px">
-        </div>
-        <button>Voltar para tela inicial</button>
+      <div>
+        <h3>Seu pagamento está sendo processado</h3>
+        <img
+          src="./assets/img/relogio.png"
+          alt="Icone de relogio"
+          width="250px"
+        />
+      </div>
+      <button onclick="Voltar()">Voltar para tela inicial</button>
     </section>
+    <script>
+      // Valida usuário logado
+      const url = new URL(window.location.href);
+
+      const parametro = url.searchParams.get("cpf");
+
+      if (parametro === null || "") {
+        document.querySelector("body").innerHTML = `
+  <div class="erro-div">
+
+    <h1>Erro !</h1>
+    <h3>Ocorreu um erro inesperado,tente entrar novamente.</h3>
+
+  </div>
+  `;
+      }
+      function Voltar() {
+        window.location.href = `Perfil Auno - sem licença.html?cpf=${parametro}`;
+      }
+    </script>
   </body>
 </html>

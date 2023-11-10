@@ -19,10 +19,9 @@
   <body>
     <nav>
       <div class="itens">
-        <button>Area do aluno</button>
-        <button>Meus cursos</button>
-        <button>Postagens</button>
-        <button>Suporte</button>
+        <button onclick="history.back()">Área de cursos</button>
+        <button onclick="meusCursos()">Meus cursos</button>
+        <button onclick="Suporte()">Suporte</button>
       </div>
       <img
         class="logo"
@@ -33,11 +32,11 @@
     </nav>
 
     
-<div class="conteiner">
+<div id="conteiner" class="conteiner">
     <section class="cursos">
       <div class="image-container">
         <div>
-          <img src="./assets/img/japa.png" />
+          <img src="./assets/img/person.png" />
         </div>
         
       </div>
@@ -57,7 +56,7 @@
   </div>
 
 
-  <div class="conteiner2">
+  <div id="conteiner2" class="conteiner2">
   <div >
     <h1 style="color: rgb(255, 0, 0);"> Premium não Ativado </h1>
     
@@ -71,6 +70,6 @@
       <center><button>Ativar Premium</button> </center>
     </div>
   </div>
- 
+  <script src="./assets/JS/perfilaluno.js"></script>
   </body>
 </html>

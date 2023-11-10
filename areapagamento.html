@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/JS/html2pdf.min.js"></script>
+    <script src="./assets/JS/jspdf.min.js"></script>
+    <script src="./assets/JS/html2canvas.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -37,54 +40,81 @@
       />
     </nav>
     <section class="Pagamento-Content">
-        <div class="pagamento">
-            <h5>PAGAMENTO</h5>
-            <div class="box-cartao">
-                <div class="cartao-dados">
-                    <input type="radio"/>
-                    <p>Cartão de crédito</p>
-                </div>
-                <div class="cartao-dados-2">
-                    <label>Número do cartão</label>
-                    <input type="text">
-                </div>
-                <div class="cartao-dados-3">
-                    <div>
-                        <label>Data vencimento</label>
-                    <input type="month" id="mes-ano" name="mes-ano" min="2023-01" max="2030-12">
-                    </div>
-                    <div>
-                        <label>Código de segurança</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="check1">
-                    <input type="checkbox" name="" id="">
-                    <p>Dados do portador iguais aos pessoais</p>
-                </div> 
-                <div class="check2">
-                    <input type="checkbox" name="" id="">
-                    <p>Dados de cobrança iguais aos da entrega</p>
-                </div>               
-            </div>
-            <div class="boleto-check">
-                <input type="radio">
-                <p>Boleto</p>
-            </div>
-            <button class="btn-voltar">VOLTAR</button>
-            <button class="btn-confirmar">CONFIRMAR DADOS</button>
-        </div>
-        <div class="resultado">
-            <h4>RESUMO</h4>
-            <div class="produtos">
-                <h6>Ativar o premium</h6>
-                <p>R$ 100,00</p>
+      <div class="pagamento">
+        <h5>PAGAMENTO</h5>
+        <div class="box-cartao">
+          <div class="cartao-dados">
+            <input
+              type="radio"
+              name="metodo-pagamento"
+              value="cartao"
+              id="pagamento-cartao"
+            />
+            <p>Cartão de crédito</p>
+          </div>
+          <div class="cartao-dados-2">
+            <label>Número do cartão</label>
+            <input type="text" id="numero-cartao" />
+            <div class="campo-erro" id="erro-numero-cartao"></div>
+          </div>
+          <div class="cartao-dados-3">
+            <div>
+              <label>Data vencimento</label>
+              <input
+                type="month"
+                id="mes-ano"
+                name="mes-ano"
+                min="2023-01"
+                max="2030-12"
+              />
             </div>
             <div>
-                <strong><p>Total</p></strong>
-                <p>R$ 100,00</p>
+              <label>Código de segurança</label>
+              <input type="text" id="codigo-seguranca" />
             </div>
+            <div class="campo-erro" id="erro-codigo-seguranca"></div>
+          </div>
+          <div class="check1">
+            <input
+              type="checkbox"
+              name="dados-pessoais-iguais"
+              id="dados-pessoais-iguais"
+            />
+            <p>Dados do portador iguais aos pessoais</p>
+          </div>
+          <div class="check2">
+            <input
+              type="checkbox"
+              name="dados-cobranca-iguais"
+              id="dados-cobranca-iguais"
+            />
+            <p>Dados de cobrança iguais aos da entrega</p>
+          </div>
         </div>
+        <div class="boleto-check">
+          <input
+            type="radio"
+            name="metodo-pagamento"
+            value="boleto"
+            id="pagamento-boleto"
+          />
+          <p>Boleto</p>
+        </div>
+        <button id="btn-voltar" class="btn-voltar">VOLTAR</button>
+        <button class="btn-confirmar">CONFIRMAR DADOS</button>
+      </div>
+      <div class="resultado">
+        <h4>RESUMO</h4>
+        <div class="produtos">
+          <h6>Ativar o premium</h6>
+          <p>R$ 100,00</p>
+        </div>
+        <div>
+          <strong><p>Total</p></strong>
+          <p>R$ 100,00</p>
+        </div>
+      </div>
     </section>
+    <script src="./assets/JS/areapagamento.js"></script>
   </body>
 </html>
